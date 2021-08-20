@@ -6,12 +6,10 @@ from functools import wraps
 from jose import jwt
 from urllib.request import urlopen
 
-
 AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
 ALGORITHMS = os.environ.get('ALGORITHMS')
 API_AUDIENCE = os.environ.get('API_AUDIENCE')
 
-## AuthError Exception
 '''
 AuthError Exception
 A standardized way to communicate auth failure modes
@@ -23,8 +21,6 @@ class AuthError(Exception):
         self.error = error
         self.status_code = status_code
 
-
-## Auth Header
 
 '''
 @TODO implement get_token_auth_header() method

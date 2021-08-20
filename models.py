@@ -8,9 +8,7 @@ db = SQLAlchemy()
 
 
 def setup_db(app, db_path=DATABASE_PATH):
-    """
-    Initializes database
-    """
+    """ Initializes database """
     app.config["SQLALCHEMY_DATABASE_URI"] = db_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
