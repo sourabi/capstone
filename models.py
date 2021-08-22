@@ -13,10 +13,20 @@ def setup_db(app, db_path=DATABASE_PATH):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
+    # create all tables - uncomment the below line before running teat_app.py file
+    # db_drop_and_create_all()
 
 
-def update():
-    db.session.commit()
+'''
+db_drop_and_create_all()
+    drops the database tables and starts fresh
+    can be used to initialize a clean database
+'''
+
+
+def db_drop_and_create_all():
+    db.drop_all()
+    db.create_all()
 
 
 class Movies(db.Model):

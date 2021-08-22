@@ -91,7 +91,7 @@ def create_app(test_config=None):
                 movie.delete()
                 return jsonify({
                     "success": True,
-                    "movies": movie_id
+                    "movie_id": movie_id
                 })
         except Exception as e:
             handle_exception(e)
@@ -168,7 +168,7 @@ def create_app(test_config=None):
                 actor.delete()
                 return jsonify({
                     "success": True,
-                    "actors": actor_id
+                    "actor_id": actor_id
                 })
         except Exception as e:
             handle_exception(e)
