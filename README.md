@@ -1,8 +1,8 @@
 # Casting Agency
-Capstone Project for Udacity Full Stack Web Developer Nanodegree
+Capstone Project for Udacity Full Stack Web Developer Nanodegree 
 
 ## About the project
-Casting agency is a fictional company that responsible for creating and managing movies and actors.
+[Casting Agency](https://fsnd-castingagency-2021.herokuapp.com/) is a fictional company that responsible for creating and managing movies and actors.
 
 This project is a catalog for Casting Agency employees to manage movies and actors. Employees have different permission based on their roles.
 - Casting Assistant
@@ -120,21 +120,24 @@ python test_app.py
 ### Postman
 To test endpoints with [Postman](https://getpostman.com):
 
-Insert some 5 records in movies and actors table and run the capstone.postman_collection.json. please edit the actor_id, movie_id according to the id given by the database.
-Also generate and update the tokens in collection level variables if old one expires.
+- Insert some records in movies and actors tables. 
+- Please edit the actor_id, movie_id according to the id given by the database.
+- Update the host in collection level variables to either local url or the one hosted in heroku.
+- Also generate and update the tokens in collection level variables if old one expires.
+- Run the capstone.postman_collection.json.
 
 I have attached the test results in **_capstone.postman_test_run.json_**
 
 ## API Reference
 ### Getting Started
 #### Base URL:
-- The app is hosted at 
-- When run locally, the backend app is hosted at the default `http://127.0.0.1:5000/`
+- The app is hosted at https://fsnd-castingagency-2021.herokuapp.com/
+- When run locally, the backend app is hosted at the default http://127.0.0.1:5000/
 
 #### API Keys /Authentication (if applicable):
   - This app use [Auth0](https://auth0.com/) for authentication.
   - Role Based Authentication and roles-based access control (RBAC) are enabled.
-  - The jwt tokens on file will expire on 23/08/2021 @ 10:00am (IST). 
+  - The jwt tokens are present in setup.sh and will expire on 23/08/2021 @ 10:00am (IST). 
   - If you need updated tokens use [this url](https://fsnano.us.auth0.com/authorize?audience=castingagency&response_type=token&client_id=8FPXsoo5jQrpLSiB8gVEYiAhIYVbfJqM&redirect_uri=http://localhost:5000) and below credentials to generate new tokens
     - Role|E-mail id|Password
       ---|---|---
